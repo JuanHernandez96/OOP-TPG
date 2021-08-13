@@ -1,1 +1,1 @@
-# Object Oriented Programming Challenge: Team Profile Generator
+# Object Oriented Programming -Team Profile Generator
