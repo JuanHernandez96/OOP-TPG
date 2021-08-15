@@ -32,5 +32,5 @@ test("can get id via getId", () => {
 test("can get role via getRoles", () => {
     const employee = new Employee('name', 'email', '4' )
 
-    expect(employee.getRoles()).toBe('Employee')
+    expect(employee.getRole()).toBe('Employee')
 });
