@@ -10,7 +10,7 @@ const writeFile = fileContent => {
 
       resolve({
         ok: true,
-        message: 'File created!'
+        message: 'What is my purpose? you make an index.html file'
       });
     });
   });
