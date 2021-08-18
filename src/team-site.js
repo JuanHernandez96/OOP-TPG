@@ -2,52 +2,52 @@ const createTeam = (teamMembArr) => {
     return `
     ${teamMembArr
         .filter((role) => role.getRole() === "Manager")
-        .map((employee) => {
+        .map((m) => {
             //Base code for manager card
             return `
                 <div class="card m-2" style="width: 18rem;">
                     <div class="card-header bg-primary text-white">
-                        <h3>${employee.name}</h3>
+                        <h3>${m.name}</h3>
                         <h4><span class="fas fa-mug-hot px-1"></span>Manager</h4>
                     </div>
                     <ul class= "list-group list-group-flush">
-                        <li class="list-group-item">ID #:${employee.id}</li>
-                        <li class="list-group-item">Email Address:<a href="mailto:${employee.email}" target="_blank">${employee.email}</a></li>
-                        <li class="list-group-item">Office Number: ${employee.officeNumber}</li>
+                        <li class="list-group-item">ID #:${m.id}</li>
+                        <li class="list-group-item">Email Address:<a href="mailto:${m.email}" target="_blank">${m.email}</a></li>
+                        <li class="list-group-item">Office Number: ${m.officeNumber}</li>
                     </ul>
                 </div>
             `;
         }).join("")}
         ${teamMembArr
             .filter((role) => role.getRole() === "Engineer")
-            .map((employee) =>{
+            .map((e) =>{
                 return `
                     <div class="card m-2" style="width: 18rem;">
                     <div class="card-header bg-primary text-white">
-                        <h3>${employee.name}</h3>
+                        <h3>${e.name}</h3>
                         <h4><span class="fas fa-glasses px-1"></span>Engineer</h4>
                     </div>
                         <ul class= "list-group list-group-flush">
-                            <li class="list-group-item">ID #:${employee.id}</li>
-                            <li class="list-group-item">Email Address:<a href="mailto:${employee.email}" target="_blank">${employee.email}</a></li>
-                            <li class="list-group-item">GitHub Link:<a href="https://github.com/${employee.gitHub}" target="_blank">${employee.gitHub}</a></li>
+                            <li class="list-group-item">ID #:${e.id}</li>
+                            <li class="list-group-item">Email Address:<a href="mailto:${e.email}" target="_blank">${e.email}</a></li>
+                            <li class="list-group-item">GitHub Link:<a href="https://github.com/${e.gitHub}" target="_blank">${e.gitHub}</a></li>
                         </ul>
                     </div>
                 `;
             }).join("")}
             ${teamMembArr
                 .filter((role) => role.getRole() === "Intern")
-                .map((employee) => {
+                .map((i) => {
                     return `
                         <div class="card m-2" style="width: 18rem;">
                         <div class="card-header bg-primary text-white">
-                            <h3>${employee.name}</h3>
+                            <h3>${i.name}</h3>
                             <h4><span class="fas fa-user-graduate px-1"></span>Intern</h4>
                         </div>
                             <ul class= "list-group list-group-flush">
-                                <li class="list-group-item">ID #:${employee.id}</li>
-                                <li class="list-group-item">Email Address:<a href="mailto:${employee.email}" target="_blank">${employee.email}</a></li>
-                                <li class="list-group-item">School Name: ${employee.school}</li>
+                                <li class="list-group-item">ID #:${i.id}</li>
+                                <li class="list-group-item">Email Address:<a href="mailto:${i.email}" target="_blank">${i.email}</a></li>
+                                <li class="list-group-item">School Name: ${i.school}</li>
                             </ul>
                         </div>
                     `;

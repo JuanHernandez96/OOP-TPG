@@ -15,7 +15,7 @@ const makeManagers = () => {
     .prompt ([
         {
             type: 'input',
-            name: 'manager name',
+            name: 'mName',
             message: "What is the manager's name?",
             validate: (mName) => {
                 if (mName) {
@@ -27,7 +27,7 @@ const makeManagers = () => {
         },
         {
             type: 'input',
-            name: 'manager email',
+            name: 'mEmail',
             message: "What is your manager's email?",
             validate: (mEmail) => {
                 if (mEmail) {
@@ -40,7 +40,7 @@ const makeManagers = () => {
         },
         {
             type: 'input',
-            name: 'manager id',
+            name: 'mId',
             message: "What is the manager's id?",
             validate: (mId) => {
                 if (mId) {
@@ -53,7 +53,7 @@ const makeManagers = () => {
         },
         {
             type: 'input',
-            name: "managers office number",
+            name: "mOfficeNumber",
             message: "What is the manager's office number?",
             validate: (mOfficeNumber) => {
                 if (mOfficeNumber) {
@@ -86,7 +86,7 @@ const addEmployee = () => {
             .prompt ([
                 {
                     type: 'input',
-                    name: "engineer name",
+                    name: "eName",
                     message: "What is your engineer's name?",
                     validate: (eName) => {
                         if (eName) {
@@ -99,7 +99,7 @@ const addEmployee = () => {
                 },
                 {
                     type: 'input',
-                    name: "engineer's email",
+                    name: "eEmail",
                     message: "What is your engineer's email?",
                     validate: (eEmail) => {
                         if (eEmail) {
@@ -112,7 +112,7 @@ const addEmployee = () => {
                 },
                 {
                     type: 'input',
-                    name: 'engineer id',
+                    name: 'eId',
                     message: "What is your engineer's ID?",
                     validate: (eId) => {
                         if (eId) {
@@ -125,7 +125,7 @@ const addEmployee = () => {
                 },
                 {
                     type: 'input',
-                    name: 'engineer github',
+                    name: 'eGithub',
                     message: "What is the engineer's Github username?",
                     validate: (eGithub) => {
                         if (eGithub) {
@@ -147,7 +147,7 @@ const addEmployee = () => {
             .prompt([
                 {
                     type: "input",
-                    name: "intern name",
+                    name: "iName",
                     message: "What is the intern's name?",
                     validate: (iName) => {
                         if (iName) {
@@ -160,7 +160,7 @@ const addEmployee = () => {
                 },
                 {
                     type: 'input',
-                    name: 'intern email',
+                    name: 'iEmail',
                     message: "What is the intern's email?",
                     validate: (iEmail) => {
                         if (iEmail) {
@@ -173,7 +173,7 @@ const addEmployee = () => {
                 },
                 {
                     type: 'input',
-                    name: 'intern ID',
+                    name: 'iId',
                     message: "What is the intern's ID?",
                     validate: (iId) => {
                         if (iId) {
@@ -186,7 +186,7 @@ const addEmployee = () => {
                 },
                 {
                     type: 'input',
-                    name: 'interns school',
+                    name: 'iSchool',
                     message: "What is the name of the intern's school?",
                     validate: (iSchool) => {
                         if (iSchool) {
@@ -196,7 +196,7 @@ const addEmployee = () => {
                             return false;
                         }
                     }
-                }
+                },
             ])
             .then(({ iName, iEmail, iId, iSchool }) => {
                 let intern = new Intern( iName, iEmail, iId, iSchool );
